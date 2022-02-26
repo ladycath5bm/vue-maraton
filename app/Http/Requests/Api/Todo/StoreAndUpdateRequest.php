@@ -15,8 +15,8 @@ class StoreAndUpdateRequest extends FormRequest
     {
         return [
             'title' => ['required', 'min:3', 'max:60'],
-            'description' => ['required', 'min:10'],
-            'done' => ['required', 'boolean'],
+            'description' => ['min:10'],
+            'done' => ['boolean'],
         ];
     }
 }

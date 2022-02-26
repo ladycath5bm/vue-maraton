@@ -21,8 +21,7 @@ class ToDoController extends Controller
         $validatedData = $request->validated();
 
         $todo->title = $validatedData['title'];
-        $todo->description = $validatedData['description'];
-        $todo->done = $validatedData['done'];
+        $request->has('description') && $todo->description = $validatedData['description'];
 
         $todo->save();
 

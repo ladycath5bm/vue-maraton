@@ -1,3 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Reggae+One&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.font-reggae {
+    font-family: 'Reggae One', cursive;
+}
+
+.btn {
+    @apply rounded px-4 py-2 font-semibold shadow-md ring-offset-2 focus:ring-2;
+}
+
+.btn-primary {
+    @apply bg-green-600 text-white hover:bg-green-700 focus:ring-green-500;
+}
+
+.btn-secondary {
+    @apply bg-gray-600 text-white hover:bg-gray-700 focus:ring-gray-500;
+}
+
+.btn-danger {
+    @apply bg-red-600 text-white hover:bg-red-700 focus:ring-red-500;
+}

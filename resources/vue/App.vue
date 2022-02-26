@@ -1,4 +1,6 @@
 <template>
+    <ToDoModal v-if="false" />
+    <DeleteToDoModal v-if="false" />
     <div class="flex h-screen flex-col">
         <HeaderApp />
         <div class="flex flex-grow justify-center">
@@ -22,7 +24,10 @@
 import HeaderApp from './components/HeaderApp.vue';
 import CreateTodoForm from './components/forms/CreateTodoForm.vue';
 import ToDoCard from './components/ToDoCard.vue';
+import ToDoModal from './components/modals/ToDoModal.vue';
+import DeleteToDoModal from './components/modals/DeleteToDoModal.vue';
+
 export default {
-    components: { HeaderApp, CreateTodoForm, ToDoCard },
+    components: { HeaderApp, CreateTodoForm, ToDoCard, ToDoModal, DeleteToDoModal },
 };
 </script>

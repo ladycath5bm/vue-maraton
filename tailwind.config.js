@@ -1,7 +1,15 @@
+const defaultTheme = require('tailwindcss/defaultTheme');
+
 module.exports = {
     content: ['./resources/**/*.blade.php', './resources/**/*.js', './resources/**/*.vue'],
     theme: {
-        extend: {},
+        extend: {
+            fontFamily: {
+                sans: ['Ubuntu', ...defaultTheme.fontFamily.sans],
+            },
+        },
     },
-    plugins: [],
+    plugins: [
+        require('@tailwindcss/forms'),
+    ],
 };

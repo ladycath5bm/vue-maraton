@@ -13,5 +13,5 @@ export const actions = {
 
     closeModal: () => {
         state.modal = null;
-    }
+    },
 };

@@ -17,7 +17,7 @@ import { actions } from '../../store';
 export default {
     components: { Timestamp, XIcon, PencilAltIcon },
     setup() {
-        return { close: () => actions.closeModal(), preventClose: () => event.stopPropagation() };
+        return { close: () => actions.closeModal(), preventClose: (event) => event.stopPropagation() };
     },
 };
 </script>

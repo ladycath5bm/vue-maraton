@@ -21,8 +21,8 @@ import { todoServices } from '../../../js/services/todoServices';
 export default {
     components: { XIcon, ExclamationIcon, LayoutModal },
     setup() {
-        const deleteToDo = () => {
-            todoServices.destroy(state.todoIdSelected);
+        const deleteToDo = async () => {
+            await todoServices.destroy(state.todoSelected.id);
             actions.closeModal();
             actions.refreshToDos();
         };

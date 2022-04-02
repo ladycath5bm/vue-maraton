@@ -2,13 +2,18 @@
 
 namespace App\Http\Controllers\Api;
 
-use App\Http\Controllers\Controller;
-use App\Http\Requests\Api\Todo\StoreAndUpdateRequest;
-use App\Http\Resources\Api\TodoResource;
 use App\Models\Todo;
-use Illuminate\Http\JsonResponse;
-use Illuminate\Http\Resources\Json\ResourceCollection;
+use App\Exports\TodoExport;
+use App\Imports\TodoImport;
+use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+use Illuminate\Http\JsonResponse;
+use App\Http\Controllers\Controller;
+use Maatwebsite\Excel\Facades\Excel;
+use App\Http\Resources\Api\TodoResource;
+use App\Http\Requests\Api\Todo\StoreAndUpdateRequest;
+use Illuminate\Http\Resources\Json\ResourceCollection;
+
 
 class ToDoController extends Controller
 {
@@ -64,16 +69,21 @@ class ToDoController extends Controller
         return TodoResource::make($todo);
     }
 
-    public function import():
+    public function import(Request $request)
     {
 
+        $file = $request->file('file');
 
+        Excel::import(new TodoImport, $file);
 
+        return view('app');
     }
 
-    public function export():
+    public function export(Request $request)
     {
+        $status = $request->export;
+        //dd($status);
 
-        
+        return (new TodoExport($request->export))->download('todos.xlsx');
     }
 }

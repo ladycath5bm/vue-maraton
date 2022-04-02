@@ -1,6 +1,6 @@
 <template>
     <Component :is="modalSelected" />
-    <Dashboard />
+    <Dashboard :importRoute="importRoute"/>
 </template>
 
 <script>

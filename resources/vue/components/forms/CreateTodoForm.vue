@@ -8,6 +8,7 @@
                 placeholder="ToDo Name"
             />
             <button @click="createTodo" class="btn btn-primary">Create</button>
+
         </div>
         <textarea
             class="rounded focus:border-gray-500 focus:ring-gray-500"
@@ -16,6 +17,10 @@
             rows="2"
             placeholder="Description"
         ></textarea>
+<a :href="route('')" type="button">Import</a>
+<a :href="route('')" type="button">Export</a>
+
+
     </div>
 </template>
 
@@ -37,6 +42,9 @@ export default {
         };
 
         return { title, description, createTodo };
+
+
     },
+
 };
 </script>

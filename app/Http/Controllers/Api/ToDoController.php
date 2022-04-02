@@ -14,11 +14,12 @@ class ToDoController extends Controller
 {
     public function index(): ResourceCollection
     {
-        return TodoResource::collection(Todo::paginate());
+        return TodoResource::collection(Todo::latest('id')->paginate(5));
     }
 
     public function store(StoreAndUpdateRequest $request): JsonResponse
     {
+        //dd($request->all();
         $todo = new Todo();
         $validatedData = $request->validated();
 
@@ -61,5 +62,18 @@ class ToDoController extends Controller
         $todo->save();
 
         return TodoResource::make($todo);
+    }
+
+    public function import():
+    {
+
+
+
+    }
+
+    public function export():
+    {
+
+        
     }
 }

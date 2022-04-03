@@ -1,13 +1,22 @@
 <script setup>
-// This starter template is using Vue 3 <script setup> SFCs
-// Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
-import HelloWorld from './components/HelloWorld.vue'
+  import Metric1 from "./components/Metric1.vue";
+  import data from "/Fixtures/todoData.json";
+
+  const m1Data = {
+    labels: ['Completed', 'Pending', 'Processing'],
+    data: [data.completedTodos, data.pendingTodos, data.inProcessTodos]
+  }
 </script>
 
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Hello Vue 3 + Vite" />
+  <div class="min-h-screen grid grid-cols-2">
+    <div class="bg-gray-100">
+      <Metric1 v-bind="m1Data"/>
+    </div>
+    <div class="bg-green-400"></div>
+  </div>  
 </template>
+
 
 <style>
 #app {

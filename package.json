@@ -1,29 +1,46 @@
 {
-    "private": true,
-    "scripts": {
-        "dev": "npm run development",
-        "development": "mix",
-        "watch": "mix watch",
-        "prod": "npm run production",
-        "production": "mix --production",
-        "lint": "npx prettier --write .",
-        "lint:check": "npx prettier --check ."
-    },
-    "devDependencies": {
-        "@tailwindcss/forms": "^0.4.0",
-        "autoprefixer": "^10.4.2",
-        "axios": "^0.25",
-        "laravel-mix": "^6.0.6",
-        "lodash": "^4.17.19",
-        "postcss": "^8.4.7",
-        "prettier": "^2.5.1",
-        "prettier-plugin-tailwindcss": "^0.1.8",
-        "tailwindcss": "^3.0.23",
-        "vue-loader": "^16.8.3"
-    },
-    "dependencies": {
-        "@heroicons/vue": "^1.0.5",
-        "date-fns": "^2.28.0",
-        "vue": "^3.2.31"
-    }
+  "private": true,
+  "scripts": {
+    "dev": "npm run development",
+    "development": "mix",
+    "watch": "mix watch",
+    "prod": "npm run production",
+    "production": "mix --production",
+    "lint": "npx prettier --write .",
+    "lint:check": "npx prettier --check ."
+  },
+  "devDependencies": {
+    "@tailwindcss/forms": "^0.4.0",
+    "autoprefixer": "^10.4.4",
+    "axios": "^0.25",
+    "laravel-mix": "^6.0.6",
+    "lodash": "^4.17.19",
+    "postcss": "^8.4.12",
+    "prettier": "^2.5.1",
+    "prettier-plugin-tailwindcss": "^0.1.8",
+    "tailwindcss": "^3.0.23",
+    "vue-loader": "^16.8.3"
+  },
+  "dependencies": {
+    "@heroicons/vue": "^1.0.5",
+    "date-fns": "^2.28.0",
+    "vue": "^3.2.31"
+  },
+  "name": "todolist",
+  "description": "<p align=\"center\"><a href=\"https://laravel.com\" target=\"_blank\"><img src=\"https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg\" width=\"400\"></a></p>",
+  "version": "1.0.0",
+  "main": "tailwind.config.js",
+  "directories": {
+    "test": "tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ladycath5bm/vue-maraton.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ladycath5bm/vue-maraton/issues"
+  },
+  "homepage": "https://github.com/ladycath5bm/vue-maraton#readme"
 }
